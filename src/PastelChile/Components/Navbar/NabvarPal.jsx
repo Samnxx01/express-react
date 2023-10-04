@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import PastelImg001 from '../../../PastelImg/comfet57.svg';
+import PastelImg030 from '../../../PastelImg/pastch030.svg';
 
 function NabvarPal() {
     function responsive(){
@@ -27,7 +27,7 @@ function NabvarPal() {
                 <li className='ele001'><Link to="/contactenos" className='link-nav'>¿Quienes Somos?</Link></li>
                 <li className='ele001'>
                   <Link to="Iniciar_Sesion" className='link-nav'>
-                    <span className='span006'><img src={PastelImg001} className="icon006" /></span>
+                    <span className='span006'><img src={PastelImg030} className="icon006" /></span>
                   </Link>
                 </li>
             </ul>

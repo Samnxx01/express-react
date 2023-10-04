@@ -1,7 +1,7 @@
 import React from 'react';
 import PastelImg002 from '../../../PastelImg/pastch002.jpg';
 import NabvarPal from '../Navbar/NabvarPal';
-import cardProdu from './cardProdu';
+import CardProdu from './cardProdu';
 
 function ProductPal() {
   return (
@@ -20,7 +20,7 @@ function ProductPal() {
         </div>
       </div>
       <div>
-        <cardProdu />
+        <CardProdu />
       </div>
     </div>
   )

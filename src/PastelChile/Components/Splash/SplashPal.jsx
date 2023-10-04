@@ -2,6 +2,7 @@ import React from 'react';
 import NabvarPal from '../Navbar/NabvarPal';
 import PastelImg002 from '../../../PastelImg/pastch002.jpg';
 
+
 function SplashPal() {
   return (
     <div>
@@ -11,8 +12,7 @@ function SplashPal() {
           <div className='text-001'>
             <h1 className='h1001'>Pastelería Chilena</h1>
           </div>        
-        </div>
-
+        </div>      
     </div>
   )
 }

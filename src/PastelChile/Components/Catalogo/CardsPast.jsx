@@ -1,19 +1,13 @@
 import React from 'react';
 import PastelImg005 from './../../../PastelImg/pastch006.jpg';
+import { Link } from 'react-router-dom';
 
 function CardsPast() {
   return (
     <div>
         <div className="container004">
+        <Link to="produ" className="link-card001">
         <div className="card-1 card-div">
-            <div className="like-icon-div">
-                <label for="card-1-like" className="like-icon-div-child">
-                    <input type="checkbox" id="card-1-like"/>
-                    <i className="far fa-heart heart-empty"></i>
-                    <i className="fas fa-heart heart-fill"></i>
-                </label>
-            </div>
-            
             <div className="gow-img-div img-div">
                 <img src={PastelImg005} alt="god-of-war-figurine"/>
             </div>
@@ -29,15 +23,9 @@ function CardsPast() {
                 </div>
             </div>
         </div>
-
+        </Link>
+        <Link to="produ" className="link-card001">
         <div className="card-2 card-div">
-            <div className="like-icon-div">
-                <label for ="card-2-like" className="like-icon-div-child">
-                    <input type="checkbox" id="card-2-like"/>
-                    <i className="far fa-heart heart-empty"></i>
-                    <i className="fas fa-heart heart-fill"></i>
-                </label>
-            </div>
             <div className="sekiro-img-div img-div">
                 <img src={PastelImg005} alt="sekiro-figurine"/>
             </div>
@@ -53,15 +41,9 @@ function CardsPast() {
                 </div>
             </div>
         </div>
-
+        </Link>
+        <Link to="produ" className="link-card001">
         <div className="card-3 card-div">
-            <div className="like-icon-div">
-                <label for="card-3-like" className="like-icon-div-child">
-                    <input type="checkbox" id="card-3-like"/>
-                    <i className="far fa-heart heart-empty"></i>
-                    <i className="fas fa-heart heart-fill"></i>
-                </label>
-            </div>
             <div className="dazai-img-div img-div">
                 <img src={PastelImg005} alt="sekiro-figurine"/>
             </div>
@@ -77,15 +59,9 @@ function CardsPast() {
                 </div>
             </div>
         </div>
-
+        </Link>
+        <Link to="produ" className="link-card001">
         <div className="card-4 card-div">
-            <div className="like-icon-div">
-                <label for="card-4-like" className="like-icon-div-child">
-                    <input type="checkbox" id="card-4-like"/>
-                    <i className="far fa-heart heart-empty"></i>
-                    <i className="fas fa-heart heart-fill"></i>
-                </label>
-            </div>
             <div className="u4-img-div img-div">
                 <img src={PastelImg005} alt="u4-figurine"/>
             </div>
@@ -101,6 +77,7 @@ function CardsPast() {
                 </div>
             </div>
         </div>
+        </Link>
     </div>
     </div>
   )

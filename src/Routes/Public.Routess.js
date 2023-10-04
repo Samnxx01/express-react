@@ -4,11 +4,11 @@ import { PublicRoute } from '../Routes/HelperRoutes';
 import DashBoard from '../CompuFet/Admin/DashBoard';
 import Pastel from '../PastelChile/Pastel';
 import NabvarPal from '../PastelChile/Components/Navbar/NabvarPal';
-import catPal from '../PastelChile/Components/Catalogo/catPal';
+import CatPal from '../PastelChile/Components/Catalogo/catPal';
 import ProductPal from '../PastelChile/Components/Product/ProductPal';
 import qsPal from '../PastelChile/Components/QSPal/qsPal';
-import Regis from '../CompuFet/Formularios/Sesion/Regis';
 import Inisesion from '../PastelChile/Components/Login/Inisesion';
+import Regis from '../PastelChile/Components/Login/Regis';
 
 
 const PublicRoutess = () => {
@@ -20,7 +20,7 @@ const PublicRoutess = () => {
             <PublicRoute exact path="/Registrar" component={Regis} />
             <PublicRoute exact path="/Admin" component={DashBoard} />
             <PublicRoute exact path="/barraPal" component={NabvarPal} />
-            <PublicRoute exact path="/catalogo" component={catPal} />
+            <PublicRoute exact path="/catalogo" component={CatPal} />
             <PublicRoute exact path="/produ" component={ProductPal} />
             <PublicRoute exact path="/contactenos" component={qsPal} />
             <Redirect path="/**" to="/" />
