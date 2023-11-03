@@ -1,28 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NabvarPal from '../Navbar/NabvarPal';
 import Footer from '../Navbar/Footer';
-import { Link, useHistory } from 'react-router-dom'; 
-import PastelImg002 from '../../../PastelImg/pastch002.jpg';
+import { Link, useHistory } from 'react-router-dom';
+import PastelImg002 from '../../../PastelImg/pastch002.png';
 import axios from 'axios';
 
 function Inisesion() {
     const [correo, setCorreo] = useState('');
     const [password, setPassword] = useState('');
-    const history = useHistory(); // Instancia de useHistory para redirigir 
+    const history = useHistory();
 
-    const iniciarSesion = async () => {
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            history.push('/');
+        }
+    }, [history]);
+
+    const iniciarSesion = async (userType) => {
         try {
-            const response = await axios.post('http://localhost:8000/api/auth/login/usuario', {
+            const url = `http://localhost:8000/api/auth/login/${userType}`;
+            const response = await axios.post(url, {
                 correo,
                 password,
             });
 
-            //mostrar una alerta de éxito y redirigir al usuario
+            const token = response.data.token;
+            localStorage.setItem('token', token);
+
+            // Obtener el nickname y el rol del usuario
+            const nickname = response.data.verificar.nickname;
+            const rol = response.data.verificar.rol; 
+            const id = response.data.verificar.iud;
+
+            // Almacenar el nickname y el rol en localStorage
+            localStorage.setItem('nickname', nickname);
+            localStorage.setItem('rol', rol);
+            localStorage.setItem('id', id);
+
             console.log('Inicio de sesión exitoso');
+            console.log(token);
+            console.log(nickname);
+            console.log(rol);
+            console.log(id);
+
             alert('Inicio de sesión exitoso');
-            history.push('/'); // Redirige al usuario al Home 
+            history.push('/');
         } catch (error) {
-            //mostrar un mensaje de error al usuario y registrar el error en la consola
             console.error('Error al iniciar sesión', error);
             alert('Error al iniciar sesión. Por favor, verifica tus credenciales.');
         }
@@ -41,7 +65,7 @@ function Inisesion() {
                                 <h3 className="h1-ini">Bienvenido, Inicie Sesión</h3>
                                 <form onSubmit={(e) => {
                                     e.preventDefault();
-                                    iniciarSesion();
+                                    iniciarSesion('usuario');
                                 }}>
                                     <div className='input001'>
                                         <input
@@ -50,6 +74,7 @@ function Inisesion() {
                                             placeholder='Correo Electrónico'
                                             value={correo}
                                             onChange={(e) => setCorreo(e.target.value)}
+                                            required
                                         />
                                     </div>
                                     <div className='input001'>
@@ -59,6 +84,7 @@ function Inisesion() {
                                             placeholder='Contraseña'
                                             value={password}
                                             onChange={(e) => setPassword(e.target.value)}
+                                            required
                                         />
                                         <div>
                                             <a href="#" className='text003'>¿Olvidaste tu Contraseña? Recupérala, aquí!</a>

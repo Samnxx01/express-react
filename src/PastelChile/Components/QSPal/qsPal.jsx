@@ -1,6 +1,6 @@
 import React from 'react'
 import NabvarPal from '../Navbar/NabvarPal';
-import PastelImg002 from '../../../PastelImg/pastch002.jpg';
+import PastelImg002 from '../../../PastelImg/pastch002.png';
 import Footer from '../Navbar/Footer';
 
 function qsPal() {

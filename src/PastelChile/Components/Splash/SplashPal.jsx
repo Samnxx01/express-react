@@ -1,6 +1,6 @@
 import React from 'react';
 import NabvarPal from '../Navbar/NabvarPal';
-import PastelImg002 from '../../../PastelImg/pastch002.jpg';
+import PastelImg002 from '../../../PastelImg/pastch002.png';
 
 
 function SplashPal() {
@@ -10,7 +10,7 @@ function SplashPal() {
         <div className="container001">
           <div className="imgcircle"><img className="img001" src={PastelImg002} alt=''/></div>
           <div className='text-001'>
-            <h1 className='h1001'>Pastelería Chilena</h1>
+            <h1 className='h1001'>Allier Pastelería</h1>
           </div>        
         </div>      
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import PastelImg002 from '../../../PastelImg/pastch002.jpg';
+import PastelImg002 from '../../../PastelImg/pastch002.png';
 
 function Regis() {
     const [formData, setFormData] = useState({

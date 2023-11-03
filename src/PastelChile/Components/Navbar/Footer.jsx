@@ -1,5 +1,5 @@
 import React from 'react';
-import PastelImg002 from '../../../PastelImg/pastch002.jpg';
+import PastelImg002 from '../../../PastelImg/pastch002.png';
 
 function Footer() {
   return (

@@ -8,6 +8,7 @@ import ProductPal from '../PastelChile/Components/Product/ProductPal';
 import qsPal from '../PastelChile/Components/QSPal/qsPal';
 import Inisesion from '../PastelChile/Components/Login/Inisesion';
 import Regis from '../PastelChile/Components/Login/Regis';
+import Admin from '../PastelChile/Components/Dashboard/Admin';
 
 
 const PublicRoutess = () => {
@@ -17,9 +18,10 @@ const PublicRoutess = () => {
             <PublicRoute exact path="/" component={Pastel} />
             <PublicRoute exact path="/Iniciar_Sesion" component={Inisesion} />
             <PublicRoute exact path="/Registrar" component={Regis} />
+            <PublicRoute exact path="/Admin" component={Admin} />
             <PublicRoute exact path="/barraPal" component={NabvarPal} />
             <PublicRoute exact path="/catalogo" component={CatPal} />
-            <PublicRoute exact path="/produ" component={ProductPal} />
+            <PublicRoute exact path="/produ/:id" component={ProductPal} />
             <PublicRoute exact path="/contactenos" component={qsPal} />
             <Redirect path="/**" to="/" />
         </Switch>
@@ -27,5 +29,3 @@ const PublicRoutess = () => {
 }
 
 export default PublicRoutess
-
-// https://www.fiscalia.gov.co/colombia/wp-content/uploads/D-102731.pdf
